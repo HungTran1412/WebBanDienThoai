@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="shortcut icon" href="./Image/logo.png">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>HHH tech</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./Image/logo.png" alt="Logo">
+        <div class="middle-section">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icons">
+                <a href="./cart.html"><button class="favorite"><i class="fas fa-heart"></i></button></a>
+                <a href="./cart.html"><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+            </div>
+        </div>
+        <ul>
+            <li><a class="node" href="./index.html">Trang chủ</a></li>
+            <li><a class="node" href="./src/introduce.html">Giới thiệu</a></li>
+            <li><a class="node" href="./src/contact.html">Liên hệ</a></li>
+            <li><a class="node" href="./src/login.html">Đăng nhập</a></li>
+        </ul>
+    </nav> 
+
+    <div class="welcome-message" id="welcomeMesage">
+        CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI SHOP CỦA CHÚNG TÔI &emsp; &emsp;&emsp;&emsp;&emsp;  CHÚC QUÝ KHÁCH MỘT NGÀY TỐT LÀNH  &emsp; &emsp;&emsp;&emsp;&emsp; CẢM ƠN QUÝ KHÁCH
+    </div>
+
+    <!-- Menu cột bên trái -->
+    <div class="sidebar">
+        <i class="fas fa-bars" id="menu"> Danh mục</i>
+        <div class="sidebar-links">
+            <a class="node" href="#All">Tất cả</a>
+            <a class="node" href="#Iphone">Iphone</a>
+            <a class="node" href="#Samsung">Samsung</a>
+            <a class="node" href="#Oppo">Oppo</a>
+            <a class="node" href="#Realme">Realme</a>
+            <a class="node" href="#Nokia">Nokia</a>
+            <a class="node" href="#Xiaomi">Xiaomi</a>
+        </div>
+        <i class="fas fa-solid fa-sort" id="menu">Sắp xếp</i>
+        <div class="sidebar-sort">
+            <a class="node" href="#sortUp"><i class="fas fa-solid fa-sort-up"> Tăng dần</i></a>
+            <a class="node" href="#sortDown"><i class="fas fa-solid fa-sort-down"> Giảm dần</i></a>
+        </div>
+    </div>
+
+    <!-- Phần slide -->
+    <div class="w3-display-container">
+        <h4>Sản phẩm đang hot</h4>
+        <img class="mySlides w3-animate-right" src="./Image/Iphone 15 Pro silde banner.webp" alt="Slide 1" />
+        <img class="mySlides w3-animate-right" src="./Image/Samsung Galaxy S24 Ultra slide banner.webp" alt="Slide 2" />
+        <img class="mySlides w3-animate-right" src="./Image/Poco M5 slide banner.webp" alt="Slide 3" />
+        <div class="w3-display-left w3-display-hover">
+            <button class="w3-button w3-light-grey fa fa-arrow-left" onclick="plusDivs(-1)"></button>
+        </div>
+        <div class="w3-display-right w3-display-hover">
+            <button class="w3-button w3-light-grey fa fa-arrow-right" onclick="plusDivs(1)"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="product iphone">
+            <a href="./src/detail.html"><img src="Image/Iphone XS Max 64GB.jpg" alt="ảnh "></a>
+            <div class="product-info">
+                <h3>Iphone XS Max 64GB</h3>
+                <span class="price">7.490.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product samsung">
+            <a href="./src/detail.html"><img src="Image/Samsung Galaxy A23 4G.webp" alt="ảnh 2"></a>
+            <div class="product-info">
+                <h3>Samsung Galaxy A23 4G</h3>
+                <span class="price">3.600.000<span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> </button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product oppo">
+            <a href="./src/detail.html"><img src="Image/Oppo Reno10 5G 8GB 256GB.webp" alt="ảnh "></a>
+            <div class="product-info">
+                <h3>OPPO Reno10 5G 8GB 256GB</h3>
+                <span class="price">8.990.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product oppo">
+            <img src="Image/Oppo Find N3 Flip 12Gb 256GB.webp" alt="ảnh 6">
+            <div class="product-info">
+                <h3>OPPO Find N3 Flip 12GB 256GB</h3>
+                <span class="price">22.990.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product nokia">
+            <img src="Image/Nokia C31 4GB 128GB.webp" alt="ảnh 8">
+            <div class="product-info">
+                <h3>Nokia C31 4GB 128GB</h3>
+                <span class="price">3.690.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product iphone">
+            <img src="Image/Iphone 14 Pro Max 128GB.webp" alt="ảnh 1">
+            <div class="product-info">
+                <h3>Iphone 14 Pro Max 128GB</h3>
+                <span class="price">27.190.000 <span class="loai-tien">₫</span></span>
+                
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product samsung">
+            <img src="Image/Samsung Galaxy S24 Ultra 12GB 256GB.webp" alt="ảnh 2">
+            <div class="product-info">
+                <h3>Samsung Galaxy S24 Ultra 12GB 256GB</h3>
+                <span class="price">26.990.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> </button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product realme">
+            <img src="Image/Realme C51 6GB 256GB.webp" alt="ảnh 3">
+            <div class="product-info">
+                <h3>Realme C51 6GB 256GB</h3>
+                <span class="price">3.990.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>    
+            </div>
+        </div>
+        <div class="product oppo">
+            <img src="Image/Oppo F11 Pro 128GB.webp" alt="ảnh 6">
+            <div class="product-info">
+                <h3>OPPO F11 Pro 128GB</h3>
+                <span class="price">8.490.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product realme">
+            <img src="Image/Realme 11 Pro 8GB 256GB.webp" alt="ảnh 3">
+            <div class="product-info">
+                <h3>Realme 11 Pro 8GB 256GB</h3>
+                <span class="price">9.690.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>    
+            </div>
+        </div>
+        <div class="product realme">
+            <img src="Image/Realme C55 8GB 256GB.webp" alt="ảnh 3">
+            <div class="product-info">
+                <h3>Realme C55 8GB 256GB</h3>
+                <span class="price">4.550.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>    
+            </div>
+        </div>
+        <div class="product realme">
+            <img src="Image/Realme C51 4GB 128GB.webp" alt="ảnh 3">
+            <div class="product-info">
+                <h3>Realme C51 4GB 128GB</h3>
+                <span class="price">3.290.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>    
+            </div>
+        </div>
+        <div class="product xiaomi">
+            <img src="Image/Xiaomi Redmi Note 12 Pro 5G.webp" alt="ảnh 5">
+            <div class="product-info">
+                <h3>Xiaomi Redmi Note 12 Pro 5G</h3>
+                <span class="price">7.390.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product nokia">
+            <img src="Image/Nokia C32 4GB 128GB.webp" alt="ảnh 8">
+            <div class="product-info">
+                <h3>Nokia C32 4GB 128GB</h3>
+                <span class="price">2.390.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product xiaomi">
+            <img src="Image/Xiaomi Redmi 13T 12GB 256GB.webp" alt="ảnh 5">
+            <div class="product-info">
+                <h3>Xiaomi Redmi 13T 12GB 256GB</h3>
+                <span class="price">11.250.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product oppo">
+            <img src="Image/Oppo Reno11 F 5G 8G 256GB.webp" alt="ảnh 6">
+            <div class="product-info">
+                <h3>OPPO Reno11 F 5G 8GB 256GB</h3>
+                <span class="price">8.490.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product nokia">
+            <img src="Image/Nokia 110 4G Pro.webp" alt="ảnh 9">
+            <div class="product-info">
+                <h3>Nokia 110 4G Pro</h3>
+                <span class="price">710.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product xiaomi">
+            <img src="Image/Xiaomi POCO X5 Pro 8GB 256GB.webp" alt="ảnh 5">
+            <div class="product-info">
+                <h3>Xiaomi POCO X5 Pro 8GB 256GB</h3>
+                <span class="price">7.390.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product iphone">
+            <img src="Image/Iphone 15 Pro 128GB.webp" alt="ảnh 1">
+            <div class="product-info">
+                <h3>Iphone 15 Pro 128GB</h3>
+                <span class="price">22.390.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product xiaomi">
+            <img src="Image/Xiaomi Redmi Note 13 Pro 4G.webp" alt="ảnh 5">
+            <div class="product-info">
+                <h3>Xiaomi Redmi Note 13 Pro 4G</h3>
+                <span class="price">6.890.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product iphone">
+            <img src="Image/Iphone 15 Pro Max 256GB.webp" alt="ảnh 1">
+            <div class="product-info">
+                <h3>Iphone 15 Pro Max 256GB</h3>
+                <span class="price">29.290.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product samsung">
+            <img src="Image/Samsung Galaxy Z Flip5 256GB.webp" alt="ảnh 2">
+            <div class="product-info">
+                <h3>Samsung Galaxy Z Flip5 256GB</h3>
+                <span class="price">17.990.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> </button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product nokia">
+            <img src="Image/Nokia 110 4G .webp" alt="ảnh 8">
+            <div class="product-info">
+                <h3>Nokia 110 4G</h3>
+                <span class="price">840.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="product samsung">
+            <img src="Image/Samsung Galaxy Z Fold5 12GB 256GB.webp" alt="ảnh 2">
+            <div class="product-info">
+                <h3>Samsung Galaxy Z Fold5 12GB 256GB</h3>
+                <span class="price">32.490.000 <span class="loai-tien">₫</span></span>
+                <p>Product Description</p>
+                <a href="">Mua hàng</a>
+                <div class="button-container">
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> </button>
+                    <button class="add-to-favorite-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="Image/logo.png" alt="logo">
+                <p>Số điện thoại: 0999.999.9999</p>
+                <p>Email: lienheHHHtech@gmail.com</p>
+                <p>Địa chỉ: Học viện nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Sản phẩm</h3><br>
+                <p><a href="#">Iphone</a></p>
+                <p><a href="#">Samsung</a></p>
+                <p><a href="#">Oppo</a></p>
+                <p><a href="#">Xiaomi</a></p>
+                <p><a href="#">Realme</a></p>
+                <p><a href="#">Nokia</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Liên hệ</h3><br>
+                <p><a href="#">Truyền thông</a></p>
+                <p><a href="#">Thông cáo báo chí</a></p>
+                <p><a href="#">Tin tức sự kiện</a></p>
+                <p><a href="#">Thư viện</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Công ty THHH HHH Tech</h3><br>
+                <p><a href="#">Mã số thuế: 01354968720</a></p>
+                <p><a href="#">Ngày thành lập: 15/03/2024</a></p>
+                <p><a href="#">Lĩnh vực: Điện tử, điện thoại, sản phẩm công nghệ</a></p>
+                <br><br><br><br>
+                <a href="#">Quay về đầu trang  <i class="fas fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 Công ty THHH HHH Tech. Trần Nguyễn Minh Hùng, Phạm Quang Hưng, Trần Thị Ngọc Huyền. Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+    
+    <!--Javascript gọi hàm-->
+    <script src="./src/type.js"></script>
+    <script>
+        // JavaScript cho slide
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+
+        showDivs(slideIndex);   
+    </script>
+</body>
+</html>

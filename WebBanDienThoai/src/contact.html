@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../Image/logo.png">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Liên hệ</title>
+
+    <!--Định dạng form-->
+    <style>
+
+        #search{
+            border: 1px solid #ccc;
+            background-color: #eee;
+            padding: 0.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Chia màn hình thành hai cột bằng nhau */
+            gap: 20px; /* Khoảng cách giữa các phần */
+            margin: 50px 2%;
+            top: 50px;
+            padding-top: 45px;
+        }
+
+        .map-container {
+            width: 100%;
+            grid-column: 1; /* Bản đồ ở cột đầu tiên */
+        }
+
+        .form-container {
+            width: 100%;
+            grid-column: 2; /* Form ở cột thứ hai */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        input[type="submit"],
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background-color:  rgb(15, 128, 0);
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .hide {
+            color: red;
+            display: none;
+        }
+
+        .thongBao {
+            color: red;
+            display: none;
+        }
+
+        .introduce-form{
+            font-family: Arial, Helvetica, sans-serif;
+        }  
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../Image/logo.png" alt="Logo">
+        <div class="middle-section">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit" id="search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icons">
+                <a href="./favorite.html"><button class="favorite"><i class="fas fa-heart"></i></button></a>
+                <a href="./cart.html"><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+            </div>
+        </div>
+        <ul>
+            <li><a class="node" href="../index.html">Trang chủ</a></li>
+            <li><a class="node" href="./introduce.html">Giới thiệu</a></li>
+            <li><a class="node" href="./contact.html">Liên hệ</a></li>
+            <li><a class="node" href="./login.html">Đăng nhập</a></li>
+        </ul>
+    </nav>      
+         
+
+    <div class="container">
+            <div class="map-container">
+                <div class="w3-card">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6900444416865!2d105.9291893736099!3d21.005058288595468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a94c1f882977%3A0x6d016e6656923f46!2zSOG7jWMgdmnhu4duIE7DtG5nIE5naGnhu4dwIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1715487630394!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="introduce-form">
+                    <h4 style="font-weight: bold">Công ty THHH HHH Tech</h4>
+                    <p>Địa chỉ: Học viện nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>
+                    <p>gmail: lienheHHHtech@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h1 id="lienHe">Liên hệ với chúng tôi</h1>
+                <form>
+                    <input id="name" type="text" name="fullname" placeholder="Nhập họ tên"/><br>
+                    <div class="hide" id="nameError">Vui lòng nhập họ tên</div>
+
+                    <input id="email" type="email" name="email" placeholder="Nhập email"/><br>
+                    <div class="hide" id="emailError">Vui lòng nhâp đúng email</div>
+
+                    <input id="phone" type="tel" name="phoneNumber" placeholder="Nhập số điện thoại"><br>
+                    <div class="hide" id="phoneNumberError">Vui lòng nhập số điện thoại</div>
+
+                    <textarea id="feedback" name="text" id="" cols="30" rows="4" placeholder="Nhập phản hồi"></textarea><br>
+                    <div class="hide" id="feedbackError">Vui lòng nhập phản hồi</div><br>
+
+                    <div id="thongBao"></div>
+
+                    <input id="Submit" type="button" name="Submit" value="Gửi">
+                    <input id="Erase" type="button" name="erase" value="Xóa trắng"><br>
+                </form>
+            </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="../Image/logo.png" alt="logo">
+                <p>Số điện thoại: 0999.999.9999</p>
+                <p>Email: lienheHHHtech@gmail.com</p>
+                <p>Địa chỉ: Học viện nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Sản phẩm</h3><br>
+                <p><a href="#">Iphone</a></p>
+                <p><a href="#">Samsung</a></p>
+                <p><a href="#">Oppo</a></p>
+                <p><a href="#">Xiaomi</a></p>
+                <p><a href="#">Realme</a></p>
+                <p><a href="#">Nokia</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Liên hệ</h3><br>
+                <p><a href="#">Truyền thông</a></p>
+                <p><a href="#">Thông cáo báo chí</a></p>
+                <p><a href="#">Tin tức sự kiện</a></p>
+                <p><a href="#">Thư viện</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Công ty THHH HHH Tech</h3><br>
+                <p><a href="#">Mã số thuế: 01354968720</a></p>
+                <p><a href="#">Ngày thành lập: 15/03/2024</a></p>
+                <p><a href="#">Lĩnh vực: Điện tử, điện thoại, sản phẩm công nghệ</a></p>
+                <br><br><br><br>
+                <a href="#">Quay về đầu trang  <i class="fas fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 Công ty THHH HHH Tech. Trần Nguyễn Minh Hùng, Phạm Quang Hưng, Trần Thị Ngọc Huyền. Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+    
+    <!--Javascript gọi hàm-->
+    <script>
+        //nút gửi và nút xóa trắng trong form liên hệ
+        $(document).ready(function(){
+            $(".hide").hide();//An thong bao
+            $("#Submit").click(function(){
+                var isValid = true;
+                
+                //Kiem tra o ho ten
+                if($("#name").val() === ""){
+                    $("#nameError").show();
+                    isValid = false;
+                }else{
+                    $("#nameError").hide();
+                }
+
+                //kiem tra o email
+                var emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if($("#email").val === "" || !emailCheck.test($("#email").val())){
+                    $("#emailError").show();
+                    isValid = false;
+                }else{
+                    $("#emailError").hide();
+                }
+
+                //kiem tra o so dien thoai
+                if($("#phone").val() === ""){
+                    $("#phoneNumberError").show();
+                    isValid = false;
+                }else{
+                    $("#phoneNumberError").hide();
+                }
+
+                //Kiem tra o feedback
+                if($("#feedback").val == ""){
+                    $("#feedBackError").show();
+                    isValid = false;
+                }else{
+                    $("#feedbackError").hide();
+                }
+
+                if(isValid){
+                    $("#thongBao").text("Dữ liệu đã được gửi thành công!");
+                }
+
+            });
+
+            $("#Erase").click(function(){
+                //Xoa cac o nhap
+                $("#name").val("");
+                $("#email").val("");
+                $("#phone").val("");
+                $("#feedback").val("");
+
+                //ẩn thông báo lỗi
+                $('.hide').hide();
+                $('#thongBao').empty();
+            });
+        });
+    </script>
+</body>
+</html>

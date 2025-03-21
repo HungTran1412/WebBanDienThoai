@@ -1,0 +1,63 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#card{
+    border: none;
+    box-shadow: 0px 0px 15px 0px rgba(9, 1, 1, 0.3);
+    color: white;
+}
+
+.table{
+    border-radius: 15px;
+}
+
+#price{
+    color: red;
+}
+
+/* CSS cho footer */
+.footer {
+    background-color: rgb(245, 245, 245);
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-section a:hover {
+    color: black;
+}
+
+.copyright{
+    text-align: center;
+}

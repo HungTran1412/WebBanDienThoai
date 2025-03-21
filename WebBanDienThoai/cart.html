@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="shortcut icon" href="./Image/logo.png">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Giỏ hàng</title>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./Image/logo.png" alt="Logo">
+        <div class="middle-section">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icons">
+                <a href="./favorite.html"><button class="favorite"><i class="fas fa-heart"></i></button></a>
+                <a href="./cart.html"><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+            </div>
+        </div>
+        <ul>
+            <li><a class="node" href="./index.html">Trang chủ</a></li>
+            <li><a class="node" href="./src/introduce.html">Giới thiệu</a></li>
+            <li><a class="node" href="./src/contact.html">Liên hệ</a></li>
+            <li><a class="node" href="./src/login.html">Đăng nhập</a></li>
+        </ul>
+    </nav>
+    
+
+    <h1 id="gioHang">Giỏ hàng của bạn</h1>
+
+    <!-- Container để hiển thị các mặt hàng trong giỏ hàng -->
+    <div id="cartItemsContainer"></div>
+    
+    <!-- Nút "Xóa tất cả" -->
+    <button id="deleteAllCartBtn" class="delete-all-btn">Xóa tất cả</button>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="./Image/logo.png" alt="logo">
+                <p>Số điện thoại: 0999.999.9999</p>
+                <p>Email: lienheHHHtech@gmail.com</p>
+                <p>Địa chỉ: Học viện nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Sản phẩm</h3><br>
+                <p><a href="#">Iphone</a></p>
+                <p><a href="#">Samsung</a></p>
+                <p><a href="#">Oppo</a></p>
+                <p><a href="#">Xiaomi</a></p>
+                <p><a href="#">Realme</a></p>
+                <p><a href="#">Nokia</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Liên hệ</h3><br>
+                <p><a href="#">Truyền thông</a></p>
+                <p><a href="#">Thông cáo báo chí</a></p>
+                <p><a href="#">Tin tức sự kiện</a></p>
+                <p><a href="#">Thư viện</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Công ty THHH HHH Tech</h3><br>
+                <p><a href="#">Mã số thuế: 01354968720</a></p>
+                <p><a href="#">Ngày thành lập: 15/03/2024</a></p>
+                <p><a href="#">Lĩnh vực: Điện tử, điện thoại, sản phẩm công nghệ</a></p>
+                <br><br><br><br>
+                <a href="#">Quay về đầu trang  <i class="fas fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 Công ty THHH HHH Tech. Trần Nguyễn Minh Hùng, Phạm Quang Hưng, Trần Thị Ngọc Huyền. Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+    
+    <!--Javascript gọi hàm-->
+    <script src="./src/type.js"></script>
+    <script>
+     // Hàm để xóa tất cả các sản phẩm yêu thích từ Local Storage và cập nhật giao diện
+        function deleteAllCartItems() {
+            // Xóa tất cả các sản phẩm từ Local Storage
+            localStorage.removeItem('cart');
+            // Cập nhật giao diện
+            displayCartItems();
+        }
+
+        // Gọi hàm khi nhấp vào nút "Xóa tất cả"
+        document.getElementById('deleteAllCartBtn').addEventListener('click', deleteAllCartItems);
+    </script>
+
+</body>
+</html>

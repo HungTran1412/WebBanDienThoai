@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="../Image/logo.png">
+        <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>Chi tiết</title>
+    </head>
+    <style>
+    .wrapper {
+        max-width: 1200px;
+        margin: 100px auto;
+    }
+
+    .product-detail {
+        display: flex;
+    }
+
+    #slider_chitietsp {
+        width: 50%;
+        margin-top: 0;
+        min-height: 450px;
+    }
+
+    .p-related{
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-detail {
+        width: 50%;
+    }
+
+    .ten-sanpham
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        margin-left: 30px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        margin-bottom: 5%;
+    }
+
+    .bgr img
+    {
+        border: 1px solid grey;
+        border-radius: 20px;
+        margin-left: 30px;
+        padding: 35px;
+    }
+
+    .product-price {
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 16px;
+        margin-top: 70px;
+    }
+
+    .product-short-description {
+        padding-left: 15px;
+        margin-bottom: 16px;
+    }
+
+    .product-short-description ul li {
+        margin-bottom: 12px;
+    }
+
+    .product-rating {
+        margin-bottom: 13px;
+    }
+
+    .product-rating {
+        font-size: 16px;
+        color: #ff2d75;
+    }
+
+    .btn-add-cart {
+        cursor: pointer;
+        font-size: 18px;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        background-color: #ff2d75;
+        font-weight: 700;
+        border-radius: 3px;
+    }
+
+    .btn-add-cart:hover {
+        box-shadow: inset 0 0 0 100px rgba(0,0,0,.2);
+    }
+
+    .product-description {
+        padding-top: 15px;
+        border-top: 1px solid #d7d7d7;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .product-description h3 {
+        width: 15%;
+        font-size: 80px;
+        padding-top: 100px;
+    }
+
+    .product-description-detail strong
+    {
+        font-size: large;
+    }
+
+    .product-description .product-description-detail {
+        width: 85%;
+    }
+
+    .product-description-detail * {
+        margin-bottom: 8px;
+    }
+
+    .product-related {
+        font-size: large;
+        padding-top: 50px;
+        border-top: 1px solid #d7d7d7;
+    }
+
+    .product-related h3 {
+        font-weight: 700;
+        font-style: 28px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .product-relateds {
+        display: flex;
+    }
+
+    .p-related-detail {
+        padding: 0 15px;
+    }
+
+    .p-related-detail img {
+        margin-bottom: 12px;
+    }
+
+    .p-related-detail p {
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .p-related-detail h4 {
+        font-weight: 300;
+        text-align: center;
+        font-size: 16px;
+        white-space: .1;
+        margin-bottom: 12px;
+    }
+
+    .p-related-detail .product-rating {
+        text-align: center;
+    }
+
+    .p-related-price {
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    </style>
+    <body>
+        <nav class="navbar">
+            <img src="../Image/logo.png" alt="Logo">
+            <div class="middle-section">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <button class="favorite"><i class="fas fa-heart"></i></button>
+                    <button class="cart"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <ul>
+                <li><a class="node" href="../index.html">Trang chủ</a></li>
+                <li><a class="node" href="./introduce.html">Giới thiệu</a></li>
+                <li><a class="node" href="./contact.html">Liên hệ</a></li>
+                <li><a class="node" href="./login.html">Đăng nhập</a></li>
+            </ul>
+        </nav>
+        
+        
+        <div class="wrapper">
+            <div class="product-container">
+                <div class="product-detail">
+                    <div id="slider_chitietsp">
+                        <div class="ten-sanpham">
+                            <h1>Iphone XS Max</h1>
+                        </div>
+                        <div class="bgr">
+                            <img src="../Image/Iphone XS Max 64GB.jpg" alt="ảnh " width="75%">
+                        </div>
+                    </div>
+                    <div class="p-detail">
+                        <div class="product-price">
+                            7,490,000₫
+                        </div>
+                        <div class="product-rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="product-short-description">
+                            <ul>
+                                <li>Kích thước màn hình: 6.5 inches</li>
+                                <li>Công nghệ màn hình: Super Retina OLED</li>
+                                <li>Camera sau: 12MP</li>
+                                <li>Camera trước: 7MP</li>
+                                <li>Chipset: Apple A12 Bionic 6 nhân</li>
+                                <li>Bộ nhớ trong: 64GB</li>
+                                <li>Pin: Li-ion</li>
+                                <li>Thẻ sim: Nano-SIM</li>
+                                <li>Hệ điều hành: 12</li>
+                                <li>Độ phân giải màn hình: 1242 x 2688 pixel</li>
+                            </ul>
+                        </div>
+                        <div class="product-button">
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-description">
+                    <h3>Mô tả</h3>
+                    <div class="product-description-detail">
+                        <div><strong>Apple iPhone XS Max 64GB Chính hãng</strong><br>
+                            Nếu như năm 2011, Samsung mở đầu cho trào lưu phablet (smartphone màn hình lớn lai tablet) với chiếc Galaxy Note thế hệ đầu tiên thì đến năm 2018, Apple mới chính là hãng tạo nên bước ngoặt mới khi giới thiệu iPhone XS Max 64GB có màn hình lên đến 6.5 inch – con số chưa từng xuất hiện trên bất kỳ một chiếc điện thoại cao cấp nào của Samsung.
+                        </div><br>
+                        <div><strong>Thiết kế Apple iPhone XS Max 64GB Chính hãng</strong><br>
+                            IPhone XS Max 64GB là chiếc smartphone đặc biệt nhất từ trước đến nay của Apple với màn hình lớn nhất trong lịch sử. Kết hợp cùng viền siêu mỏng, phần tai thỏ độc đáo, khung thép không gỉ chắc chắn và mặt lưng kính bóng bẩy, iPhone XS Max để lại ấn tượng đậm nét với người dùng ngay từ cái nhìn đầu tiên. 
+                        Có 3 phiên bản màu sắc để người dùng lựa chọn gồm iPhone XS Max 64GB silver, grey và gold.</div><br>
+                        <div><strong>Màn hình Apple iPhone XS Max 64GB Chính hãng đem lại trải nghiệm hoàn hảo</strong><br>Dù có màn hình lên đến 6.5 inch, kích thước tổng thể của iPhone XS Max 64GB chỉ tương đương iPhone 8 Plus sở hữu màn hình 5.5 inch nhờ viền bezel cực mỏng, đưa nội dung tràn ra sát các mép cạnh. Đồng thời, nhờ hỗ trợ các công nghệ hiện đại như HDR10, Dolby Vision hay true-tone (tự điều chỉnh màu sắc theo môi trường xung quanh), màn hình của iPhone XS Max có chất lượng hiển thị rất tốt.</div><br>
+                        <div><strong>Apple iPhone XS Max 64GB Chính hãng được bảo vệ tốt hơn nếu chịu tác động từ nước</strong><br>Sử dụng iPhone XS Max 64GB, người dùng sẽ yên tâm hơn nếu chẳng may làm rơi điện thoại xuống nước vì Apple đã nâng cấp chuẩn chống nước lên thành IP68 (iPhone X năm ngoái tích hợp chuẩn IP67).</div><br>
+                        <div><strong>Thời lượng pin Apple iPhone XS Max 64GB Chính hãng rất ấn tượng</strong><br>
+                            Nhờ hệ điều hành mới nhất, chip mới nhất, vi xử lý sản xuất trên tiến trình hiện đại nhất vào thời điểm ra mắt nên iPhone XS Max 64GB có hiệu suất tiêu thụ điện năng rất tốt giúp thời lượng pin của máy lâu hơn 1 giờ 30 phút so với iPhone X.
+                        </div><br>
+                    </div>
+                </div>
+                <div class="product-related">
+                    <h3>Sản phẩm tương tự</h3>
+                    <div class="p-related">
+                        <div class="product-relateds">
+                            <div class="p-related-detail">
+                                <img src="../Image/Iphone 14 Pro Max 128GB.webp" alt="ảnh 1">
+                                <p>APPLE-IPHONE</p>
+                                <h4>IPHONE 14 PRO MAX 128GB</h4>
+                                <div class="product-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="p-related-price">
+                                    27,190,000₫
+                                </div>
+                            </div>
+                            <div class="p-related-detail">
+                                <img src="../Image/Iphone 15 Pro 128GB.webp" alt="ảnh 1">
+                                <p>APPLE-IPHONE</p>
+                                <h4>IPHONE 15 PRO 128GB</h4>
+                                <div class="product-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="p-related-price">
+                                    22,390,000₫
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <img src="../Image/logo.png" alt="logo">
+                    <p>Số điện thoại: 0999.999.9999</p>
+                    <p>Email: lienheHHHtech@gmail.com</p>
+                    <p>Địa chỉ: Học viện nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Sản phẩm</h3><br>
+                    <p><a href="#">Iphone</a></p>
+                    <p><a href="#">Samsung</a></p>
+                    <p><a href="#">Oppo</a></p>
+                    <p><a href="#">Xiaomi</a></p>
+                    <p><a href="#">Realme</a></p>
+                    <p><a href="#">Nokia</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Liên hệ</h3><br>
+                    <p><a href="#">Truyền thông</a></p>
+                    <p><a href="#">Thông cáo báo chí</a></p>
+                    <p><a href="#">Tin tức sự kiện</a></p>
+                    <p><a href="#">Thư viện</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Công ty THHH HHH Tech</h3><br>
+                    <p><a href="#">Mã số thuế: 01354968720</a></p>
+                    <p><a href="#">Ngày thành lập: 15/03/2024</a></p>
+                    <p><a href="#">Lĩnh vực: Điện tử, điện thoại, sản phẩm công nghệ</a></p>
+                    <br><br><br><br>
+                    <a href="#">Quay về đầu trang  <i class="fas fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2024 Công ty THHH HHH Tech. Trần Nguyễn Minh Hùng, Phạm Quang Hưng, Trần Thị Ngọc Huyền. Đã đăng ký bản quyền.</p>
+            </div>
+        </footer>
+    
+            <!--Javascript gọi hàm-->
+            <script src="./style.css"></script>
+            <script>cartButton();</script>
+            <script>favoriteButton();</script>
+            <script>homeButton();</script>
+    </body>
+</html>
